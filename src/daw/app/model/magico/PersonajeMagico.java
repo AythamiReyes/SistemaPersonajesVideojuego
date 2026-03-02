@@ -31,5 +31,4 @@ public abstract class PersonajeMagico extends Personaje {
     public void setInteligencia(int inteligencia){
         this.intelingencia = inteligencia;
     }
-
 }
