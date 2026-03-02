@@ -1,7 +1,5 @@
-package daw.model.fisico;
-
-import daw.interfaces.Sigiloso;
-import daw.model.Personaje;
+package model.fisico;
+import model.Personaje;
 
 public class Arquero extends PersonajeFisico implements Sigiloso {
 
@@ -19,7 +17,7 @@ public class Arquero extends PersonajeFisico implements Sigiloso {
     public void atacar(Personaje objetivo){
         if (flechas > 0){
             int dano = destreza * 2;
-            objetivo.setSalud(objetivo.getSalud() - dano);
+            objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() - dano);
             flechas--;
             System.out.println(getNombre() + " dispara una flecha a " + objetivo.getNombre() + " causando " + dano + " de daño! Flechas restantes: " + flechas);
         }else {
@@ -41,4 +39,5 @@ public class Arquero extends PersonajeFisico implements Sigiloso {
     //Getters
     public int getDestreza(){return destreza; }
     public int getFlechas(){return flechas; }
+
 }

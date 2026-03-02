@@ -1,8 +1,5 @@
-package daw.model.fisico;
-
-import daw.interfaces.Defendible;
-import daw.interfaces.Sigiloso;
-import daw.model.Personaje;
+package model.fisico;
+import model.Personaje;
 
 public class Asesino extends PersonajeFisico implements Sigiloso, Defendible {
 
@@ -18,7 +15,7 @@ public class Asesino extends PersonajeFisico implements Sigiloso, Defendible {
     @Override
     public void atacar(Personaje objetivo) {
         int dano = agilidad * 3;
-        objetivo.setSalud(objetivo.getSalud() - dano);
+        objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() - dano);
         System.out.println(getNombre() + " apuñala a " + objetivo.getNombre() + " causando " + dano + " de daño.");
     }
 
@@ -38,7 +35,7 @@ public class Asesino extends PersonajeFisico implements Sigiloso, Defendible {
 
     public void golpeOculto(Personaje objetivo){
         int dano = agilidad * 5;
-        objetivo.setSalud(objetivo.getSalud() - dano);
+        objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() - dano);
         System.out.println(" Ataque oculto " + getNombre() + " hace " + dano + " de daño por la espalda.");
     }
 

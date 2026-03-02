@@ -43,4 +43,14 @@ public abstract class Personaje {
     public String toString(){
         return "Usuario"+ id + ", "+ nombre + " con nivel " + nivel + " y con vida de " + puntosDeVida;
     }
+
+    public void defender() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'defender'");
+    }
+
+    public void ocultar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'ocultar'");
+    }
 }

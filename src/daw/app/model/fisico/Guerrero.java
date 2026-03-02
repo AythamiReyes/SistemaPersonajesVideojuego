@@ -1,7 +1,5 @@
-package daw.model.fisico;
-
-import daw.interfaces.Defendible;
-import daw.model.Personaje;
+package model.fisico;
+import model.Personaje;
 
 public class Guerrero extends PersonajeFisico implements Defendible {
 
@@ -18,7 +16,7 @@ public class Guerrero extends PersonajeFisico implements Defendible {
     @Override
     public void atacar(Personaje objetivo){
         int dano = fuerza * 2;
-        objetivo.setSalud(objetivo.getSalud() - dano);
+        objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() - dano);
         System.out.println(getNombre() + " ataca a " + objetivo.getNombre() + " causando " + dano + " de daño.");
     }
 
@@ -31,12 +29,18 @@ public class Guerrero extends PersonajeFisico implements Defendible {
     //Método de ataque crítico.
     public void ataqueCritico(Personaje objetivo){
         int dano = fuerza * 4;
-        objetivo.setSalud(objetivo.getSalud() - dano);
-        System.out.println("¡Ataque crítico! "getNombre() + " a hecho " + dano + " de daño.");
+        objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() - dano);
+        System.out.println("¡Ataque crítico! " + getNombre() + " a hecho " + dano + " de daño.");
     }
 
     //Getters
     public int getFuerza(){return fuerza; }
     public int getArmadura(){return armadura; }
+
+    @Override
+    public void ocultar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'ocultar'");
+    }
 
 }
