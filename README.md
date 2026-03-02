@@ -9,4 +9,10 @@ Como ejecutar el programa.
 
 Reparto de tareas.
 
+Aythami Reyes: Arquero.java, Asesino.java, Guerrero.java, PersonajeFisico.java.
+
+Damián Pérez: Mago.java, PersonajeMagico.java, Personaje.java, Defendible.java, Sigiloso.java.
+
+Alejandro Acosta: ConsolaView.java, Clerigo.java, JuegoController.java, Main.java.
+
 Diagrama Simple de la jerarquía.
