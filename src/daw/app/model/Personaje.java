@@ -3,13 +3,17 @@ package model;
 import java.util.Objects;
 
 public abstract class Personaje {
-    private String id;
+    private static int contadorId = 1; 
+    
+    private final String id;
     private String nombre;
     private int nivel;
     private int puntosDeVida;
 
-    public Personaje(String id, String nombre, int nivel, int puntosDeVida){
-        this.id = id;
+    public Personaje(String nombre, int nivel, int puntosDeVida) {
+        this.id = "PJ-" + contadorId; 
+        contadorId++; 
+        
         this.nombre = nombre;
         this.nivel = nivel;
         this.puntosDeVida = puntosDeVida;
@@ -18,7 +22,7 @@ public abstract class Personaje {
     public abstract void atacar(Personaje objetivo);
 
     @Override
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Personaje personaje = (Personaje) o;
@@ -26,31 +30,21 @@ public abstract class Personaje {
     }
 
     @Override 
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(id);
     }
 
-    public String getId(){return id;}
-    public String getNombre(){return nombre;}
-    public int getNivel(){return nivel;}
-    public int getPuntosDeVida(){return puntosDeVida;}
+    public String getId() { return id; }
+    public String getNombre() { return nombre; }
+    public int getNivel() { return nivel; }
+    public int getPuntosDeVida() { return puntosDeVida; }
 
-    public void setPuntosDeVida(int puntosDeVida){
+    public void setPuntosDeVida(int puntosDeVida) {
         this.puntosDeVida = puntosDeVida;
     }
 
     @Override
-    public String toString(){
-        return "Usuario"+ id + ", "+ nombre + " con nivel " + nivel + " y con vida de " + puntosDeVida;
-    }
-
-    public void defender() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'defender'");
-    }
-
-    public void ocultar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ocultar'");
+    public String toString() {
+        return "[" + getClass().getSimpleName() + " " + id + "] " + nombre + " (Nv: " + nivel + " | PS: " + puntosDeVida + ")";
     }
 }
