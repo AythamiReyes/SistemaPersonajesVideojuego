@@ -1,6 +1,5 @@
-package model.fisico;
+package model.interfaces;
 
 public interface Defendible {
-    void ocultar();
     void defender();
 }
