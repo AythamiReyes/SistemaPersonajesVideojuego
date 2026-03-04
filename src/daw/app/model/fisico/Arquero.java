@@ -1,13 +1,14 @@
 package model.fisico;
 import model.Personaje;
+import model.interfaces.Sigiloso;
 
 public class Arquero extends PersonajeFisico implements Sigiloso {
 
     private int destreza;
     private int flechas;
 
-    public Arquero(String nombre, int nivel, int salud, int destreza, int flechas){
-        super(nombre, nivel, salud);
+    public Arquero(String nombre, int nivel, int puntosDeVida, int destreza, int flechas){
+        super(nombre, nivel, puntosDeVida);
         this.destreza = destreza;
         this.flechas = flechas;
     }
@@ -21,7 +22,8 @@ public class Arquero extends PersonajeFisico implements Sigiloso {
             flechas--;
             System.out.println(getNombre() + " dispara una flecha a " + objetivo.getNombre() + " causando " + dano + " de daño! Flechas restantes: " + flechas);
         }else {
-            System.out.println(getNombre() + " no le quedan flechas.");
+            System.out.println(getNombre() + " no le quedan flechas. Debe usar un ataque básico.");
+            golpeBasico(objetivo);
         }
     }
 

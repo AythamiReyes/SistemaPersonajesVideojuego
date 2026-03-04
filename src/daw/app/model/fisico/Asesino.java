@@ -1,13 +1,15 @@
 package model.fisico;
 import model.Personaje;
+import model.interfaces.Defendible;
+import model.interfaces.Sigiloso;
 
 public class Asesino extends PersonajeFisico implements Sigiloso, Defendible {
 
     private int agilidad;
     private int sigilo;
 
-    public Asesino(String nombre, int nivel, int salud, int agilidad, int sigilo){
-        super(nombre, nivel, salud);
+    public Asesino(String nombre, int nivel, int puntosDeVida, int agilidad, int sigilo){
+        super(nombre, nivel, puntosDeVida);
         this.agilidad = agilidad;
         this.sigilo = sigilo;
     }

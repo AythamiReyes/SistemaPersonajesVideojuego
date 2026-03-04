@@ -1,13 +1,14 @@
 package model.fisico;
 import model.Personaje;
+import model.interfaces.Defendible;
 
 public class Guerrero extends PersonajeFisico implements Defendible {
 
     private int fuerza;
     private int armadura;
 
-    public Guerrero(String nombre, int nivel, int salud, int fuerza, int armadura){
-        super(nombre, nivel, salud);
+    public Guerrero(String nombre, int nivel, int puntosDeVida, int fuerza, int armadura){
+        super(nombre, nivel, puntosDeVida);
         this.fuerza = fuerza;
         this.armadura = armadura;
     }
@@ -36,11 +37,5 @@ public class Guerrero extends PersonajeFisico implements Defendible {
     //Getters
     public int getFuerza(){return fuerza; }
     public int getArmadura(){return armadura; }
-
-    @Override
-    public void ocultar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ocultar'");
-    }
 
 }
