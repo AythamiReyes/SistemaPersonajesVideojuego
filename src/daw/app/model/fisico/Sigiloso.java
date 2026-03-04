@@ -1,9 +1,7 @@
 package model.fisico;
-
 import model.Personaje;
 
 public interface Sigiloso {
-
-    void atacar(Personaje objetivo);
-
+    void ocultar();
+    void ataqueSigiloso(Personaje objetivo);
 }
