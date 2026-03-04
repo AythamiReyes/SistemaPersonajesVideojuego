@@ -13,6 +13,6 @@ Aythami Reyes: Arquero.java, Asesino.java, Guerrero.java, PersonajeFisico.java.
 
 Damián Pérez: Mago.java, PersonajeMagico.java, Personaje.java, Clerigo.java.
 
-Alejandro Acosta: ConsolaView.java, Defendible.java, JuegoController.java, Main.java, Sigiloso.java.
+Alejandro Acosta: ConsolaView.java, Defendible.java, Sigiloso.java, Curable.java, JuegoController.java, Main.java y adaptabilidad de una parte del codigo que daba fallos por las nuevas implementaciones.
 
 Diagrama Simple de la jerarquía.
