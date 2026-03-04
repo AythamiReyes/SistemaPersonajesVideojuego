@@ -6,7 +6,7 @@ public abstract class PersonajeMagico extends Personaje {
     private int intelingencia;
     
     public PersonajeMagico(String nombre, int nivel, int puntosDeVida, int mana, int inteligencia){
-        super(nombre, nombre, nivel, puntosDeVida);
+        super(nombre, nivel, puntosDeVida);
         this.mana = mana;
         this.intelingencia = inteligencia;
     }
@@ -24,7 +24,7 @@ public abstract class PersonajeMagico extends Personaje {
         this.mana = mana;
     }
 
-    public int getIneteligencia(){
+    public int getInteligencia(){
         return intelingencia;
     }
 
